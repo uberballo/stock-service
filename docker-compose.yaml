@@ -9,7 +9,7 @@ services:
     stdin_open: true
     volumes:
       - "./front:/app"
-      - "/app/front/node_modules"
+      - "/node_modules"
 
   back:
     build:
