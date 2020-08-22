@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/joho/godotenv"
+	"github.com/uberballo/stockservice/cmd/db"
 	"github.com/uberballo/stockservice/cmd/server"
 )
 
@@ -13,5 +14,6 @@ func init() {
 	}
 }
 func main() {
+	db.Ping()
 	server.StartServer()
 }

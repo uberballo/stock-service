@@ -8,5 +8,6 @@ require (
 	github.com/joho/godotenv v1.3.0
 	github.com/mailru/easyjson v0.7.3 // indirect
 	github.com/uberballo/web-scraper v0.0.0-20200816100844-6419f11d6d8d
+	go.mongodb.org/mongo-driver v1.4.0
 	golang.org/x/sys v0.0.0-20200814200057-3d37ad5750ed // indirect
 )

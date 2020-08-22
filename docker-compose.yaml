@@ -17,6 +17,8 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "3001:3001"
+    depends_on:
+      - mongodb_container
 
   mongodb_container:
     image: mongo:latest

@@ -3,6 +3,7 @@ package server
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/uberballo/web-scraper/cmd/scraper"
 )
@@ -12,7 +13,9 @@ func hello(w http.ResponseWriter, req *http.Request) {
 }
 
 func stock(w http.ResponseWriter, req *http.Request) {
-	res := scraper.ScrapeAsJSON("https://www.kauppalehti.fi/porssi/kurssit/XHEL")
+	url := os.Getenv("MAIN_URL")
+
+	res := scraper.ScrapeAsJSON(url)
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(res)
 }
